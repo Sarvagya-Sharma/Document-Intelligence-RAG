@@ -49,19 +49,4 @@ This project was developed as a major internship project with a focus on practic
 
 ## 🏗️ System Architecture  
 
-```text
-User Query
-    ↓
-React Frontend
-    ↓
-FastAPI Backend
-    ↓
-Embedding Model
-    ↓
-Vector Store (Similarity Search)
-    ↓
-Top-k Relevant Chunks
-    ↓
-LLM (Query + Context)
-    ↓
-Grounded Response
+![RAG Architecture](images/flow.png)
