@@ -278,23 +278,7 @@ BM25_WEIGHT  = 0.4                     # Weight for sparse vs dense fusion
 | `.xlsx` / `.xls` | openpyxl | Each sheet as a markdown table |
 | `.docx` | Docling | Full document with formatting |
 | `.txt` / `.md` | Docling | Plain text |
-=======
-### **Frontend**
-- **Framework**: React.js with Vite
-- **Styling**: Vanilla CSS (Premium Custom Design)
-- **Visuals**: Earth Video Backgrounds, Lucide Icons
 
-### **Backend**
-- **API Framework**: FastAPI (Asynchronous)
-- **Document Processing**: Docling, PyMuPDF, Pytesseract (OCR)
-- **Orchestration**: Custom RAG Pipeline
-
-### **AI & Data**
-- **LLM**: Google Gemini 1.5 Pro / Flash
-- **Vector DB**: ChromaDB
-- **Tracing**: LangSmith
-
----
 
 ## ⚙️ Getting Started
 
@@ -332,28 +316,6 @@ npm run dev
 ```
 
 ---
-
-## 📸 Screenshots
-
-| Dashboard | Chat Interface |
-|-----------|----------------|
-| ![Analytics](images/analytics_placeholder.png) | ![Chat](images/chat_placeholder.png) |
-
-*(Note: Add actual screenshots to the `images/` folder and update the links above)*
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
->>>>>>> e173043 (Updated the code for frontend and backend)
-
 ---
 
 ## 🙏 Acknowledgements
@@ -363,12 +325,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 - [Google Gemini](https://deepmind.google/technologies/gemini/) for the primary LLM
 - [Ollama](https://ollama.ai/) for local model fallback
 - [LangSmith](https://smith.langchain.com/) for RAG evaluation infrastructure
-=======
-Distributed under the MIT License. See `LICENSE` for more information.
 
----
 
-<p align="center">
-  Developed with ❤️ for Document Intelligence
-</p>
->>>>>>> e173043 (Updated the code for frontend and backend)
+
+
