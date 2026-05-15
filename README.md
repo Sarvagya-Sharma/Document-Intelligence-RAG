@@ -337,13 +337,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ---
 
-## 📄 License
-
-<<<<<<< HEAD
-MIT License — see [LICENSE](LICENSE) for details.
-
----
-
 ## 🙏 Acknowledgements
 
 - [Sentence Transformers](https://www.sbert.net/) for embedding and reranking models
