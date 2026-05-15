@@ -16,6 +16,25 @@ Built as a major internship project with a focus on practical LLM system design,
 
 ---
 
+## 🖼️ Screenshots
+
+
+### Home Section
+<img width="1908" height="906" alt="Screenshot 2026-05-10 000928" src="https://github.com/user-attachments/assets/652ca2ba-ca61-46c9-a4a5-fd64b2a1d56c" />
+
+### About Section
+<img width="1890" height="903" alt="Screenshot 2026-05-10 001009" src="https://github.com/user-attachments/assets/c06ef66e-fff9-477b-9dae-2e6d7f5fddff" />
+
+### Chat Section
+<img width="1902" height="900" alt="Screenshot 2026-05-10 003055" src="https://github.com/user-attachments/assets/c0c3d64e-b32f-4c4b-a472-dbae4de82981" />
+
+### Answer with Sources
+<img width="1886" height="908" alt="Screenshot 2026-05-15 115606" src="https://github.com/user-attachments/assets/34419396-a94b-41f6-8cca-a7f407cb06f2" />
+
+### Analytics Section
+<img width="1888" height="913" alt="Screenshot 2026-05-15 115402" src="https://github.com/user-attachments/assets/c23e1ddf-8cf8-447c-a7fe-99dd9e577aab" />
+
+
 ## ✨ Key Features
 
 - **Multi-Format Ingestion** — PDF (with OCR fallback for scanned pages), PPTX, XLSX, DOCX, TXT, Markdown
