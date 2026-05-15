@@ -1,0 +1,62 @@
+:root {
+  --bg: rgba(6, 8, 15, 0.96);
+  --card: rgba(12, 12, 22, 0.84);
+  --card-soft: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.1);
+  --text: #f7f4ff;
+  --text-muted: #b7a6ff;
+  --accent: #ff6b6b;
+  --accent-2: #ff8e53;
+  --shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  background: radial-gradient(circle at 20% 20%, rgba(255, 77, 77, 0.12), transparent 50%),
+    radial-gradient(circle at 80% 30%, rgba(0, 229, 204, 0.08), transparent 50%),
+    radial-gradient(circle at 50% 90%, rgba(255, 77, 77, 0.06), transparent 50%),
+    var(--bg);
+  color: var(--text);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(2px 2px at 130px 80px, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 160px 120px, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(2px 2px at 200px 60px, rgba(0, 229, 204, 0.6), transparent),
+    radial-gradient(1px 1px at 250px 150px, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(2px 2px at 300px 40px, rgba(255, 77, 77, 0.4), transparent);
+  background-size: 350px 200px;
+  animation: twinkle 8s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.95;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 0.95;
+    transform: scale(1);
+  }
+}

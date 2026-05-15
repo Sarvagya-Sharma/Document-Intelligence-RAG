@@ -1,0 +1,236 @@
+.analytics-container {
+  min-height: 100vh;
+  width: 100%;
+  padding: 120px 24px 60px;
+  background-color: #06080f;
+  background-image: radial-gradient(80% 50% at 20% 20%, rgba(255, 77, 77, 0.12), transparent 50%),
+    radial-gradient(60% 60% at 80% 30%, rgba(0, 229, 204, 0.08), transparent 50%),
+    radial-gradient(90% 70% at 50% 90%, rgba(255, 77, 77, 0.06), transparent 50%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.analytics-container::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(2px 2px at 130px 80px, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 160px 120px, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(2px 2px at 200px 60px, rgba(0, 229, 204, 0.6), transparent),
+    radial-gradient(1px 1px at 250px 150px, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(2px 2px at 300px 40px, rgba(255, 77, 77, 0.4), transparent);
+  background-size: 350px 200px;
+  animation: twinkle 8s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.analytics-content {
+  max-width: 1320px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
+}
+
+.analytics-header {
+  margin-bottom: 70px;
+  text-align: center;
+  animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.analytics-title {
+  font-family: 'Abril Fatface', serif;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin: 0 0 10px;
+  background: linear-gradient(135deg, #fff 0%, #ff4d4d 50%, #00e5cc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.analytics-subtitle {
+  color: rgba(186, 230, 253, 0.7);
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 10px auto 0;
+}
+
+.charts-grid-v2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 32px;
+  margin-top: 20px;
+}
+
+@media (max-width: 1000px) {
+  .charts-grid-v2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Grid Layouts */
+.stats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+  justify-content: center;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 20px !important;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  min-width: 220px;
+  flex: 1;
+  max-width: 300px;
+}
+
+.stat-card-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.8);
+}
+
+.stat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+  transition: transform 0.4s ease;
+}
+
+.stat-icon svg {
+  font-size: 22px !important;
+}
+
+.stat-card:hover .stat-icon {
+  transform: scale(1.15) rotate(8deg);
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.1;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Chart Cards */
+.chart-card {
+  background: rgba(255, 255, 255, 0.02) !important;
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 32px !important;
+  padding: 32px;
+  transition: all 0.3s ease;
+}
+
+.chart-card:hover {
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+  transform: translateY(-4px);
+}
+
+.chart-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0.9;
+}
+
+/* Empty State Styling */
+.empty-state {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  border: 1px dashed rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.01);
+  font-size: 0.9rem;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.2); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* MUI Chart overrides */
+.MuiChartsAxis-bottom .MuiChartsAxis-tickLabel,
+.MuiChartsAxis-left .MuiChartsAxis-tickLabel {
+  fill: rgba(255, 255, 255, 0.4) !important;
+  font-family: 'Outfit', sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 0.75rem !important;
+}
+
+.MuiChartsAxis-bottom .MuiChartsAxis-line,
+.MuiChartsAxis-left .MuiChartsAxis-line {
+  stroke: rgba(255, 255, 255, 0.08) !important;
+}
+
+@media (max-width: 600px) {
+  .analytics-container {
+    padding: 88px 16px 16px;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .stat-card {
+    padding: 20px;
+  }
+  .charts-grid-v2 {
+    grid-template-columns: 1fr;
+  }
+}

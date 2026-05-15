@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🧠 Document Intelligence RAG System
 ### A Production-Oriented Retrieval-Augmented Generation Platform
 
@@ -81,11 +82,64 @@ Built as a major internship project with a focus on practical LLM system design,
 ```
 <img width="835" height="609" alt="ChatGPT Image May 10, 2026, 04_06_21 PM_r1_c1_r1_c1" src="https://github.com/user-attachments/assets/68a7a135-b10a-431c-a52b-2b64dde96c1c" />
 
+=======
+# 🧠 InstaDocs: Document Intelligence RAG System
+
+![InstaDocs Banner](images/banner.png)
+
+### *Turn your documents into an interactive knowledge base with the power of Gemini and ChromaDB.*
+
+---
+
+[![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Google Gemini](https://img.shields.io/badge/Google%20Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev/)
+[![ChromaDB](https://img.shields.io/badge/ChromaDB-white?style=for-the-badge&logo=chroma&logoColor=black)](https://www.trychroma.com/)
+
+---
+
+## 🚀 Overview
+
+**InstaDocs** is a cutting-edge Retrieval-Augmented Generation (RAG) platform designed to eliminate LLM hallucinations by grounding responses in your private data. Whether it's PDFs, DOCX, or research papers, InstaDocs ingests, processes, and indexes your content to provide factually accurate, context-aware answers.
+
+This project focuses on **production-readiness**, featuring a modular FastAPI backend and a premium, high-performance React frontend.
+
+---
+
+## ✨ Key Features
+
+- **📂 Intelligent Ingestion**: Support for PDF, DOCX, PPTX, XLSX, and Text files.
+- **🔍 Semantic Retrieval**: Uses advanced vector embeddings to find the most relevant chunks of data.
+- **⚡ Real-time Interaction**: ChatGPT-style conversational interface for seamless document querying.
+- **📊 Performance Analytics**: Built-in dashboard to monitor retrieval confidence, latency, and system health.
+- **🛡️ Context Grounding**: Significantly reduces hallucinations by forcing the LLM to cite its sources from your documents.
+- **🌓 Modern UI**: Premium design with glassmorphism, dynamic backgrounds, and responsive layouts.
+
+---
+
+## 🏗️ System Architecture
+
+```mermaid
+graph TD
+    A[User Uploads Document] --> B[Docling / PyMuPDF Parser]
+    B --> C[Text Chunking & Preprocessing]
+    C --> D[Google Gemini Embeddings]
+    D --> E[(ChromaDB Vector Store)]
+    
+    F[User Query] --> G[Semantic Search in ChromaDB]
+    G --> H[Retrieve Contextual Chunks]
+    H --> I[Gemini 1.5 Pro / Flash]
+    I --> J[Context-Grounded Response]
+    J --> K[User Interface]
+```
+>>>>>>> e173043 (Updated the code for frontend and backend)
 
 ---
 
 ## 🛠️ Tech Stack
 
+<<<<<<< HEAD
 | Layer | Technology |
 |---|---|
 | **Frontend** | React, WebSocket, ReactMarkdown, MUI Icons |
@@ -262,11 +316,87 @@ BM25_WEIGHT  = 0.4                     # Weight for sparse vs dense fusion
 | `.xlsx` / `.xls` | openpyxl | Each sheet as a markdown table |
 | `.docx` | Docling | Full document with formatting |
 | `.txt` / `.md` | Docling | Plain text |
+=======
+### **Frontend**
+- **Framework**: React.js with Vite
+- **Styling**: Vanilla CSS (Premium Custom Design)
+- **Visuals**: Earth Video Backgrounds, Lucide Icons
+
+### **Backend**
+- **API Framework**: FastAPI (Asynchronous)
+- **Document Processing**: Docling, PyMuPDF, Pytesseract (OCR)
+- **Orchestration**: Custom RAG Pipeline
+
+### **AI & Data**
+- **LLM**: Google Gemini 1.5 Pro / Flash
+- **Vector DB**: ChromaDB
+- **Tracing**: LangSmith
+
+---
+
+## ⚙️ Getting Started
+
+### **1. Prerequisites**
+- Python 3.9+
+- Node.js & npm
+- Google AI Studio API Key
+
+### **2. Backend Setup**
+```bash
+# Navigate to backend directory
+cd backend
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r ../requirements.txt
+
+# Configure environment variables (.env)
+GOOGLE_API_KEY=your_api_key_here
+```
+
+### **3. Frontend Setup**
+```bash
+# Navigate to frontend directory
+cd frontend/rag
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+---
+
+## 📸 Screenshots
+
+| Dashboard | Chat Interface |
+|-----------|----------------|
+| ![Analytics](images/analytics_placeholder.png) | ![Chat](images/chat_placeholder.png) |
+
+*(Note: Add actual screenshots to the `images/` folder and update the links above)*
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+>>>>>>> e173043 (Updated the code for frontend and backend)
 
 ---
 
 ## 📄 License
 
+<<<<<<< HEAD
 MIT License — see [LICENSE](LICENSE) for details.
 
 ---
@@ -278,3 +408,12 @@ MIT License — see [LICENSE](LICENSE) for details.
 - [Google Gemini](https://deepmind.google/technologies/gemini/) for the primary LLM
 - [Ollama](https://ollama.ai/) for local model fallback
 - [LangSmith](https://smith.langchain.com/) for RAG evaluation infrastructure
+=======
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+
+<p align="center">
+  Developed with ❤️ for Document Intelligence
+</p>
+>>>>>>> e173043 (Updated the code for frontend and backend)
